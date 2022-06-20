@@ -9,6 +9,7 @@ Escribir un programa que convierta un valor dado en grados Fahrenheit a grados
 Celsius.
 
 ah = input('Escribe la cantidad de grados fahrenheit a convertir: ')
+
 cel = (float(fah)-32)/1.8
 
 
@@ -21,11 +22,17 @@ Dados dos números, mostrar la suma, resta, división y multiplicación de
 ambos.
 
 num1 = float(input('Escribe un número '))
+
 num2 = float(input('Escribe otro numero '))
+
 print('Su suma es: ', str(num1+num2))
+
 print('Su resta es: ', str(num1-num2))
+
 print('Su division es: ', str(num1/num2))
+
 print('Su multiplicación es: ', str(num1*num2))
+
 
 2.3 Ejercicio 3 (1.5 puntos)
 
