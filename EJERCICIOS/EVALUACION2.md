@@ -8,7 +8,7 @@ Realiza los ejercicios de acuerdo a las indicaciones
 Escribir un programa que convierta un valor dado en grados Fahrenheit a grados
 Celsius.
 
-ah = input('Escribe la cantidad de grados fahrenheit a convertir: ')
+fah = input('Escribe la cantidad de grados fahrenheit a convertir: ')
 
 cel = (float(fah)-32)/1.8
 
@@ -39,4 +39,12 @@ print('Su multiplicación es: ', str(num1*num2))
 Calcular el perímetro y área de un rectángulo dada su base y su altura.
 Respuesta:
 
+base = float(input('Escriba el valor de la base de un rectángulo '))
 
+
+altura = float(input('Escriba el valor de la altura de un rectángulo '))
+
+
+print('El perímetro de su rectágulo es:', str((base+altura)*2) )
+
+print('El área de su recángulo es:', str(base*altura) )
