@@ -8,6 +8,7 @@ Responder las siguientes preguntas:
 
 1.1 ¿Qué es python? (2 puntos)
 
+Es un lenguaje de programación 
 
 1.2 ¿Es multiplataforma en que sistemas operativos funciona ? (2 puntos)
 
