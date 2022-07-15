@@ -17,17 +17,96 @@ Ejemplo. imprime una multiplicacion (9 * 8 =  )por teclado se ingresa la respues
 
 Recuerda el import random
 
+
+import random
+
+
+intentos = 0
+
+acierto = 0
+
+error = 0
+
+while intentos<10:
+
+  x = random.randint(2,10)
+  
+  y = random.randint(2,10)
+
+  intentos= intentos +1
+  
+  mult = int(input(f'\nLa multiplicación {x}*{y} es igual a: '))
+ 
+ if mult==x*y:
+ 
+    print('Respuesta correcta')
+    
+    acierto=acierto+1
+    
+  else:
+  
+    print('Respuesta incorrecta. La respuesta correcta es:',x*y)
+    
+    error=error+1
+    
+
+print('\nAciertos: ',acierto)
+
+print('Errores: ', error)    
+
+
+
+
 ## Ejercicio 2 (2 puntos)
 Obtener el cuadrado de todos los elementos en la lista.
 
 Lista: [1,2,3,4,5,6,7,8,9,10]
+
+
+lista=[1,2,3,4,5,6,7,8,9,10]
+
+
+d=[n**2 for n in lista ]
+
+
+print(d)
+
 
 ## Ejercicio 3 (2 puntos)
 Obtener la cantidad de elementos mayores a 5 en la tupla.
 
 tupla = (5,2,6,7,8,10,77,55,2,1,30,4,2,3)
 
+def filtro(x):
+
+  if x>5:
+  
+    return True
+    
+  else:
+  
+    return False
+    
+
+mayor= filter(filtro,tupla)
+
+
+for x in mayor:
+
+  print(x)
+
+
 ## Ejercicio 4 (2 puntos)
 Obtener la suma de todos los elementos en la lista
 
-lista = [1,2,3,4]
+from functools import reduce  
+
+
+  def add(x, y):
+  
+      return x + y
+      
+
+  lista = [1,2,3,4]
+  
+  print(reduce(add, lista))
