@@ -12,6 +12,43 @@ entradas de datos.
 
 ● esMayorDeEdad(): Devuelve un valor lógico indicando si es mayor de edad.
 
+class Persona:
+
+    
+    def __init__(self, nombre, edad, dni):
+        
+        self._nombre = nombre
+        self._edad = edad
+        self._dni = dni
+        
+    def get_Nombre(self):
+        return self._nombre
+        
+    def set_Nombre(self, otro_nombre):
+        self._nombre = otro_nombre
+            
+    def get_edad(self):
+        return self._edad
+        
+    def set_edad(self, otra_edad):
+        self._edad = otra_edad
+        
+    def get_dni(self):
+        return self._dni
+        
+    def set_dni(self, otro_dni):
+        self._dni = otro_dni
+        
+    def mostrar(self):
+        print('El nombre es:',self.get_Nombre())
+        print('La edad es: ',self.get_edad())
+        print('El dni es: ', self.get_dni())
+        
+    def esMayorDeEdad(self):
+        if int(self._edad) >=18:
+            print(int(self._edad)>=18 )
+
+
 
 ## Ejercicio 2 (2 puntos)
 Crea una clase llamada Cuenta que tendrá los siguientes atributos: titular (que es
@@ -30,6 +67,46 @@ introducida es negativa, no se hará nada.
 
 ● retirar(cantidad): se retira una cantidad a la cuenta. La cuenta puede estar
 en números rojos.
+
+class Cuenta():
+    
+    def __init__(self, titular, cantidad = None):
+        
+        self.titular = titular
+        self._cantidad = cantidad
+    
+    @property
+    def titular(self):
+        
+        return self._titular
+    
+    @property
+    def cantidad(self):
+        
+        return self._cantidad
+        
+    @titular.setter
+    def titular(self, titular):
+        
+        self._titular = titular
+        
+    def mostrar(self):
+        
+        return "Cuenta \n" + "Titular: "+ self.titular.title() + " - Cantidad:" + str(self.cantidad)
+       
+        
+    def ingresar(self, cantidad):
+        
+        if cantidad > 0:
+            
+            self._cantidad = self._cantidad + cantidad
+        
+    def retirar(self,cantidad):
+            
+        if cantidad > 0:
+                
+            self._cantidad = self._cantidad - cantidad
+            
 
 
 ## Ejercicio 3 (2 puntos)
