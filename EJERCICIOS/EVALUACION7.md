@@ -130,3 +130,29 @@ falso en caso contrario.
 bonificación de la cuenta.
 
 ● Piensa los métodos heredados de la clase madre que hay que reescribir.
+class CuentaJoven(Cuenta):
+    
+    def __init__(self, titular, bonificacion=None, cantidad=None):
+        super().__init__(titular,cantidad)
+        self.bonificacion = bonificacion
+    
+    @property
+    def bonificacion(self):
+        
+        return self._bonificacion
+    
+
+    @bonificacion.setter
+    def bonificacion(self, bonificacion):
+        
+        self._bonificacion = bonificacion
+        
+    def mostrar(self):
+        
+        return "Cuenta Joven\n" + "Titular: "+ str(self.titular) + " - Cantidad:" + str(self.cantidad) + "- Bonificación:"+ str(self.bonificacion)
+       
+            
+    def TitularValido():
+        
+            return self.titular 
+
